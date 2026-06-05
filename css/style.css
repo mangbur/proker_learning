@@ -351,9 +351,13 @@ footer {
   color: var(--text-muted);
 }
 
-.footer-info span i {
-  color: var(--primary);
-  margin-right: 8px;
+.footer-info a {
+  text-decoration: none;
+  color: var(--text-muted);
+}
+
+.footer-info a i {
+  text-decoration: none;
 }
 
 /* =============================================
@@ -429,6 +433,7 @@ footer {
   .section-title {
     font-size: 1.8rem;
     margin-bottom: 35px;
+    margin-top: 20px;
   }
 
   section {
@@ -494,6 +499,12 @@ footer {
     flex-direction: column;
     gap: 15px;
     align-items: center;
+  }
+
+  .footer-info > a {
+    text-decoration: none;
+    color: var(--text-muted);
+    cursor: pointer;
   }
 }
 
