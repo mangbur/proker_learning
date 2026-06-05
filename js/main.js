@@ -31,4 +31,19 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.remove('menu-open');
         }
     });
+
+    // ========================================
+    // ACTIVE PAGE DETECTION
+    // ========================================
+    const currentPath = window.location.pathname;
+    navLinksItems.forEach(link => {
+        const href = link.getAttribute('href');
+        // Get the filename from href (e.g. "index.html", "contact.html")
+        const linkPage = href.split('/').pop();
+        const currentPage = currentPath.split('/').pop() || 'index.html';
+
+        if (linkPage === currentPage) {
+            link.classList.add('active');
+        }
+    });
 });
